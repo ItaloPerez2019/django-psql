@@ -35,6 +35,9 @@ def login(request):
         return render(request, 'accounts/login.html')
 
 
+
+
+
 def logout(request):
     # TODOs need to re-route to the home page
 # do not forget to log out 
