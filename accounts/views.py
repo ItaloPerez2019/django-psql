@@ -39,6 +39,8 @@ def login(request):
 
 
 def logout(request):
-    # TODOs need to re-route to the home page
-# do not forget to log out 
-    return render(request, 'accounts/logout.html')
+    if request.method == 'POST':
+        auth.logout(request)
+        return redirect('home')
+
+
